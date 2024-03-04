@@ -3,26 +3,27 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Pawn.h"
-#include "EnemyBase.generated.h"
+#include "GameFramework/Actor.h"
+#include "WayPoint.generated.h"
 
-class UFloatingPawnMovement;
 UCLASS()
-class TD1_API AEnemyBase : public APawn
+class TD1_API AWayPoint : public AActor
 {
 	GENERATED_BODY()
 	
 public:	
 	// Sets default values for this actor's properties
-	AEnemyBase();
+	AWayPoint();
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "TD1: Movement")
-	UFloatingPawnMovement* MovementComponent;
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "TD1_WayPoint")
+	AWayPoint* NextWayPoint = nullptr;
 
 };

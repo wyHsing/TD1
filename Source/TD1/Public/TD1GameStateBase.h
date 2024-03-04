@@ -9,9 +9,14 @@
 /**
  * 
  */
+class AWayPoint;
 UCLASS()
 class TD1_API ATD1GameStateBase : public AGameStateBase
 {
 	GENERATED_BODY()
 	
+public:
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "TD1_WayPoint")
+	AWayPoint* StartWayPoint = nullptr;
 };
