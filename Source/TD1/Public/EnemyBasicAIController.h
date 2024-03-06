@@ -19,7 +19,7 @@ public:
 
 	void MoveToWayPoint(AWayPoint* TargetWayPoint);
 
-	UPROPERTY(BlueprintReadOnly, Category = "TD1_WayPoint")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "TD1|WayPoint")
 	AWayPoint* CurWayPoint = nullptr;
 
 	
