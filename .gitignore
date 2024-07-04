@@ -2,8 +2,14 @@ Binaries
 DerivedDataCache
 Intermediate
 Saved
+/[Bb]uild
+/[Bb]uilds
+
 .vscode
 .vs
+*.DS_Store
+*.code-workspace
+*.ignore
 *.VC.db
 *.opensdf
 *.opendb
